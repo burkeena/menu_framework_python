@@ -31,7 +31,7 @@ print(var_visual_welcome_bar)
 ## Defining menu
 def menu():
     print("What function are you looking to use? ")
-    print("1 - Connect to Client")
+    print("1 - Print current date")
     print("2 - Selection 2")
     print("3 - Selection 3")
     print("4 - Selection 4")
@@ -44,7 +44,7 @@ while True:
     menu()  # Add the function here.
     choice = int(input("Enter choice (1-7): "))  # Change here
     if choice == 1:
-        print("The current date is: " + current_date)
+        print("The current date is: " + str(current_date))
     elif choice == 2:
         print(current_date)
     elif choice == 3:
