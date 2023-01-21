@@ -2,6 +2,8 @@
 import datetime
 import time
 import sys
+import os
+
 current_date = datetime.datetime.now()
 
 ## App Info/Constants
@@ -28,12 +30,31 @@ print(var_visual_welcome_version)
 print(var_visual_welcome_bar)
 print(var_visual_welcome_bar)
 
+## Functions
+def print_date_function():
+    print("The current date is: " + str(current_date)) ## Convert current_date from int to string
+
+def ping_google_function():
+    hostname = "google.com" #example
+    response = os.system("ping -c 10 " + hostname)
+
+
+#and then check the response...
+    if response == 0:
+        print(hostname, 'is up!')
+    else:
+        print(hostname, 'is down!')
+
+def ifconfig_function():
+    print(os.system("ifconfig"))
+
+
 ## Defining menu
 def menu():
     print("What function are you looking to use? ")
     print("1 - Print current date")
-    print("2 - Selection 2")
-    print("3 - Selection 3")
+    print("2 - Ping google.com")
+    print("3 - Run ifconfig")
     print("4 - Selection 4")
     print("5 - Selection 5")
     print("6 - Selection 6")
@@ -44,14 +65,15 @@ while True:
     menu()  # Add the function here.
     choice = int(input("Enter choice (1-7): "))  # Change here
     if choice == 1:
-        print("The current date is: " + str(current_date))
+        print_date_function()
+        break
     elif choice == 2:
-        print(current_date)
+        ping_google_function()
     elif choice == 3:
-        print(current_date)
+        ifconfig_function
     elif choice == 4:
         print(current_date)
     else:
         break
 
-mainmenu()
+menu()
