@@ -1,4 +1,4 @@
-## Grabbing an storing current date
+## Import modules
 import datetime
 import time
 import sys
@@ -46,8 +46,7 @@ def ping_google_function():
         print(hostname, 'is down!')
 
 def ifconfig_function():
-    print(os.system("ifconfig"))
-
+    print(os.system("ifconfig | grep "))
 
 ## Defining menu
 def menu():
@@ -70,7 +69,7 @@ while True:
     elif choice == 2:
         ping_google_function()
     elif choice == 3:
-        ifconfig_function
+        ifconfig_function()
     elif choice == 4:
         print(current_date)
     else:
