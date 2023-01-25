@@ -6,7 +6,7 @@ import os
 
 current_date = datetime.datetime.now()
 
-## App Info/Constants
+## App Info
 var_app_name = "Menu Toolkit v1"
 var_app_description = "Description: Tool is for learning how to work with with a basic menu and functions"
 var_app_dev_name = "by: Austin Burkeen"
