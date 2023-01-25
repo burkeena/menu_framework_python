@@ -7,7 +7,7 @@ import os
 current_date = datetime.datetime.now()
 
 ## App Info/Constants
-var_app_name = "Toolkit v1"
+var_app_name = "Menu Toolkit v1"
 var_app_description = "Description: Tool is for learning how to work with menu's and functions"
 var_app_dev_name = "by: Austin Burkeen"
 var_app_version = "v1.0" 
@@ -46,7 +46,8 @@ def ping_google_function():
         print(hostname, 'is down!')
 
 def ifconfig_function():
-    print(os.system("ifconfig | grep "))
+    print(os.system("ifconfig"))
+
 
 ## Defining menu
 def menu():
@@ -71,7 +72,7 @@ while True:
     elif choice == 3:
         ifconfig_function()
     elif choice == 4:
-        print(current_date)
+        obfuscate(command)
     else:
         break
 
