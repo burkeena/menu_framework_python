@@ -48,6 +48,9 @@ def ping_google_function():
 def ifconfig_function():
     print(os.system("ifconfig"))
 
+def netstat_function():
+    print(os.system("netstat"))
+
 
 ## Defining menu
 def menu():
@@ -55,7 +58,7 @@ def menu():
     print("1 - Print current date")
     print("2 - Ping google.com")
     print("3 - Run ifconfig")
-    print("4 - Selection 4")
+    print("4 - Run netstat")
     print("5 - Selection 5")
     print("6 - Selection 6")
     print("7 - Selection 7")
@@ -72,7 +75,7 @@ while True:
     elif choice == 3:
         ifconfig_function()
     elif choice == 4:
-        print(choice)
+        netstat_function()
     else:
         break
 
