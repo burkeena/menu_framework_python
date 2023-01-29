@@ -49,7 +49,7 @@ def ifconfig_function():
     print(os.system("ifconfig"))
 
 def netstat_function():
-    print(os.system("netstat"))
+    print(os.system("netstat")) ## Run netstat function 
 
 
 ## Defining menu
@@ -62,6 +62,9 @@ def menu():
     print("5 - Selection 5")
     print("6 - Selection 6")
     print("7 - Selection 7")
+
+## Error handling
+error_code = "Invalid selection" # Handling invalid selection
 
 ## Menu loop
 while True:
@@ -77,6 +80,6 @@ while True:
     elif choice == 4:
         netstat_function()
     else:
+        print(error_code) # If selection is not valid, print error_code variable
         break
-
 menu()
