@@ -7,3 +7,4 @@ Current Features:
 - Ping google.com
 - Display ifconfig output
 - Run netstat function
+- Basic error handling
