@@ -6,3 +6,4 @@ Current Features:
 - Output date
 - Ping google.com
 - Display ifconfig output
+- Run netstat function
